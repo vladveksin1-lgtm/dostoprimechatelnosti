@@ -1,0 +1,497 @@
+/* Общие стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== ШАПКА САЙТА (СИНЯЯ) ===== */
+.site-header {
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 4px 20px rgba(26, 41, 128, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ff9a00, #ff0066, #00bfff, #00ff88);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #fff 0%, #a5d8ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+#userGreeting {
+    margin: 10px 0 15px;
+    font-style: italic;
+    color: #e6f7ff;
+    font-size: 1.1rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: inline-block;
+    border: 2px solid transparent;
+}
+
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== ОСНОВНОЕ СОДЕРЖИМОЕ ===== */
+.content {
+    padding: 40px 0;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки секций */
+h2 {
+    color: #1a2980;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid linear-gradient(90deg, #1a2980, #26d0ce);
+    background: linear-gradient(90deg, #1a2980, #26d0ce);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff9a00, #ff0066);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+/* ===== СЕТКА ДОСТОПРИМЕЧАТЕЛЬНОСТЕЙ ===== */
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.attraction-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(26, 41, 128, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #e8f4ff;
+    position: relative;
+}
+
+.attraction-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #1a2980, #26d0ce);
+}
+
+.attraction-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(26, 41, 128, 0.2);
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.attraction-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    color: #1a2980;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.card-content h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 4px;
+    background: linear-gradient(to bottom, #ff9a00, #ff0066);
+    border-radius: 2px;
+}
+
+.card-content p {
+    color: #5a6c7d;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.card-content .address {
+    font-size: 0.95em;
+    color: #1a2980;
+    border-top: 2px dashed #e8f4ff;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* Кнопки в карточках */
+.card-actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e8f4ff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.anchor-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #1a2980, #26d0ce);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.anchor-link:hover {
+    background: linear-gradient(135deg, #26d0ce, #1a2980);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 41, 128, 0.3);
+    text-decoration: none;
+    color: white;
+}
+
+/* ===== БЫСТРАЯ НАВИГАЦИЯ ПО ЯКОРЯМ ===== */
+.nav-anchors {
+    background: linear-gradient(135deg, #e8f4ff 0%, #d6e8ff 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 2px solid #b8d4ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-anchors::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a2980, #26d0ce);
+}
+
+.nav-anchors h3 {
+    color: #1a2980;
+    margin-top: 0;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.anchors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.anchors-list li {
+    margin: 0;
+}
+
+.anchors-list a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #1a2980;
+    border-radius: 30px;
+    color: #1a2980;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.anchors-list a:hover {
+    background: linear-gradient(135deg, #1a2980, #26d0ce);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(26, 41, 128, 0.2);
+}
+
+/* ===== КАРТА ===== */
+.map-container {
+    margin: 40px 0;
+    border: 2px solid #e8f4ff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.map-container h2 {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background: linear-gradient(135deg, #1a2980, #26d0ce);
+    color: white !important;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+}
+
+/* ===== ПОДВАЛ САЙТА (СИНИЙ) ===== */
+.site-footer {
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ff9a00, #ff0066, #00bfff, #00ff88);
+}
+
+.site-footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.site-footer h4 {
+    color: #ffdd40;
+    margin-top: 0;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.site-footer p {
+    margin: 10px 0;
+    color: #e6f7ff;
+}
+
+.site-footer a {
+    color: #a5d8ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px dotted transparent;
+}
+
+.site-footer a:hover {
+    color: white;
+    border-bottom-color: white;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 10px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a5d8ff;
+    font-size: 0.9em;
+}
+
+/* ===== АНИМАЦИЯ ПОДСВЕТКИ ЯКОРЯ ===== */
+.attraction-card:target {
+    animation: highlightCard 2s ease;
+    box-shadow: 0 0 0 4px rgba(255, 154, 0, 0.5);
+}
+
+@keyframes highlightCard {
+    0% { 
+        transform: scale(1.02);
+        box-shadow: 0 0 0 4px rgba(255, 154, 0, 0.8), 
+                    0 20px 40px rgba(26, 41, 128, 0.3);
+    }
+    70% { 
+        box-shadow: 0 0 0 4px rgba(255, 154, 0, 0.3),
+                    0 20px 40px rgba(26, 41, 128, 0.3);
+    }
+    100% { 
+        transform: scale(1);
+        box-shadow: 0 0 0 4px rgba(255, 154, 0, 0),
+                    0 20px 40px rgba(26, 41, 128, 0.2);
+    }
+}
+
+/* ===== КНОПКА КОПИРОВАНИЯ ССЫЛКИ ===== */
+.copy-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff9a00, #ff0066);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-link-btn:hover {
+    background: linear-gradient(135deg, #ff0066, #ff9a00);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 102, 0.3);
+}
+
+.copy-feedback {
+    color: #00cc88;
+    font-weight: 500;
+    animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .attractions-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .anchors-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .site-header h1 {
+        font-size: 1.7rem;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .anchor-link, .copy-link-btn {
+        text-align: center;
+        justify-content: center;
+    }
+}

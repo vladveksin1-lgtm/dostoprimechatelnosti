@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт достопримечательностей на карте</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Основные достопримечательности Ярославской области</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#main">Главная</a></li>
+                    <li><a href="#">Проект</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id = "main">
+        <section class="content">
+            <h2>Добро пожаловать на наш сайт</h2>
+            <p>Этот сайт — навигатор по богатому наследию Ярославской земли. На ней отмечены не только древние храмы, старинные усадьбы и уникальные музеи, хранящие память веков, но и подсказаны лучшие маршруты между ними. С ней любое путешествие по региону превратится в увлекательное и продуманное погружение в историю, где каждый поворот дороги открывает новую страницу прошлого. </p>
+        </section>
+        
+        <section class="map-container">
+            <!-- <h2></h2> -->
+
+            <a href = "mapa.html">
+                <div class="expand-button">
+                    <div class="expand-circle">
+                        <div class="expand-icon">
+                            <div class="corner top-left"></div>
+                            <div class="corner top-right"></div>
+                            <div class="corner bottom-left"></div>
+                            <div class="corner bottom-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </a> 
+            <div class="map" id="map">
+                <iframe src="mapa.html" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+        <!-- города -->
+        <div class="towns-container">
+            <div class="towns-row">
+                <a href="Towns/yaroslavl.html" class="town-link">
+                    <div class="town">
+                        <h2>Ярославль</h2>
+                        <p>Основан в 1010 году. Первый христианский город на Волге, объект Всемирного наследия ЮНЕСКО.</p>
+                    </div>
+                </a>
+                <a href="Towns/tutaev.html" class="town-link">
+                    <div class="town">
+                        <h2>Тутаев</h2>
+                        <p>Основан в XIII веке. Состоит из двух исторических частей на разных берегах Волги.</p>
+                    </div>
+                </a>
+                <a href="Towns/rybinsk.html" class="town-link">
+                    <div class="town">
+                        <h2>Рыбинск</h2>
+                        <p>Известен с 1071 года. Крупнейшая в России «столица бурлачества».</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="towns-row">
+                <a href="Towns/rostov.html" class="town-link">
+                    <div class="town">
+                        <h2>Ростов</h2>
+                        <p>Упоминается с 862 года. Знаменит своим кремлём и искусством финифти.</p>
+                    </div>
+                </a>
+                <a href="Towns/uglich.html" class="town-link">
+                    <div class="town">
+                        <h2>Углич</h2>
+                        <p>Основан в 937 году. Место загадочной гибели царевича Дмитрия в 1591 году.</p>
+                    </div>
+                </a>
+                <a href="Towns/myshkin.html" class="town-link">
+                    <div class="town">
+                        <h2>Мышкин</h2>
+                        <p>Статус города с 1777 года. Знаменит своим Музеем мыши и тематическим брендом.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="towns-row">
+                <a href="Towns/gavrilov-yam.html" class="town-link">
+                    <div class="town">
+                        <h2>Гаврилов-Ям</h2>
+                        <p>Основан в 1545 году. Известен льняной мануфактурой и музеем ямщика.</p>
+                    </div>
+                </a>
+                <a href="Towns/lyubim.html" class="town-link">
+                    <div class="town">
+                        <h2>Любим</h2>
+                        <p>Основан в 1546 году. Сохранил уникальную лучевую планировку от бывшей крепости.</p>
+                    </div>
+                </a>
+                <a href="Towns/poshekhonye.html" class="town-link">
+                    <div class="town">
+                        <h2>Пошехонье</h2>
+                        <p>Статус города с 1777 года. Знаменито своим сортом сыра «Пошехонский».</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="towns-row">
+                <a href="Towns/pereslavl.html" class="town-link">
+                    <div class="town">
+                        <h2>Переславль-Залесский</h2>
+                        <p>Основан в 1152 году. Место рождения Александра Невского и «потешной флотилии» Петра I.</p>
+                    </div>
+                </a>
+                <a href="Towns/danilov.html" class="town-link">
+                    <div class="town">
+                        <h2>Данилов</h2>
+                        <p>Основан в конце XIII века. Крупный железнодорожный узел.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+            </main>
+
+    <footer class="site-footer" id="contacts">
+        <div class="container">
+            <p>&reg; 2026 Сайт с картой.</p>
+            <p>Vekhsin Vladislav</p>
+            <p>Контактный телефон: +7 (930) 123-91-88</p>
+            <p>Email: vladveksin1@gmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>
+    <!-- <footer class="site-footer" id="contacts">
+        <div class="container">
+            <p>Veksin Vladislav®</p>
+             <p>Официальный сайт: <a href="http://[адрес-сайта].ru" style="color:#ecf0f1;">[адрес-сайта].ru</a></p> 
+            <p>Контактный телефон: +7 (930) 123-91-88</p>
+            <p>Email: vladveksin1@gmail.com</p>
+        </div>
+    </footer>
+    </script> -->

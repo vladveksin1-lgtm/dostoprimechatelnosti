@@ -1,0 +1,219 @@
+/* Шапка сайта */
+.site-header {
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+    color: white;
+    padding: 20px 0;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#userGreeting {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-right: 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Основное содержимое --------------------------------------*/
+.content {
+    padding: 30px 0;
+}
+
+/* Контейнер карты -----------------------------*/
+/* Кнопка расширения карты */
+.expand-button {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.expand-button:hover {
+    transform: scale(1.1);
+}
+.expand-button:active {
+    transform: scale(0.95);
+}
+
+/* Белый круг */
+.expand-circle {
+    transform: translateX(25%);
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+/* Контейнер для иконки */
+.expand-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+/* Общие стили для углов квадрата */
+.corner {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border: 3px solid #000;
+}
+
+/* Левый верхний угол */
+.top-left {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+/* Правый верхний угол */
+.top-right {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+/* Левый нижний угол */
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+
+/* Правый нижний угол */
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+/* корробка карты */
+.map-container {
+    margin: 30px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.map-container h2 {
+    text-align: center;
+}
+.map {
+    width: 100%;
+    height: 400px;
+}
+
+/* Города------------------------------------------------------------ */
+.towns-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.towns-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.town {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border: 4px solid transparent;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.town::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, var(--grad-start), var(--grad-end));
+    border-radius: 14px;
+    z-index: -1;
+}
+
+.town:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Индивидуальные градиенты для каждого города */
+.town:nth-child(1) { --grad-start: #ff6b6b; --grad-end: #ffa726; }
+.town:nth-child(2) { --grad-start: #4ecdc4; --grad-end: #44a08d; }
+.town:nth-child(3) { --grad-start: #ffa726; --grad-end: #ff6b6b; }
+.town:nth-child(4) { --grad-start: #42a5f5; --grad-end: #478ed1; }
+.town:nth-child(5) { --grad-start: #ab47bc; --grad-end: #8e24aa; }
+.town:nth-child(6) { --grad-start: #66bb6a; --grad-end: #43a047; }
+.town:nth-child(7) { --grad-start: #26c6da; --grad-end: #00acc1; }
+.town:nth-child(8) { --grad-start: #ffca28; --grad-end: #ffb300; }
+.town:nth-child(9) { --grad-start: #78909c; --grad-end: #546e7a; }
+.town:nth-child(10) { --grad-start: #ec407a; --grad-end: #d81b60; }
+.town:nth-child(11) { --grad-start: #5c6bc0; --grad-end: #3949ab; }
+
+/* Заголовки и текст внутри блоков */
+.town h2 {
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.town p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+.town-link {
+    text-decoration: none; /* Убираем подчёркивание */
+    color: inherit; /* Наследуем цвет текста от родителя */
+    display: inline-block; /* Чтобы ссылка вела себя как блок */
+}
+    
+/* ----------------------------Подвал--------------- */
+.site-footer {
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}

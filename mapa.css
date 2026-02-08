@@ -1,0 +1,54 @@
+#map { 
+    height: 1000px; 
+    width: 100%;
+}
+.leaflet-control-container {
+    display: none !important;
+}
+
+/* ++++++++++++++++++++++ Стили для кастомных меток +++++++++++++++++ */
+.custom-marker {
+    background: #ff4444;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+/* Кнопка выхода из полноэкранного режима */
+#exitFullscreenButton {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: rgba(44, 62, 80, 0.95);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#exitFullscreenButton:hover {
+    background-color: rgba(52, 73, 94, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
+#exitFullscreenButton:active {
+    transform: translateY(0);
+}
+
+/* +++++Стиль для полноэкранного режима карты+++++ */
+.map-fullscreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 999 !important;
+}
